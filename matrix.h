@@ -6,7 +6,7 @@
 using namespace std;
 
 template <typename T>
-class Matrix {
+class Matrix { 
     private:
         Node<T>* hRows;
         Node<T>* hColumns;
@@ -15,7 +15,13 @@ class Matrix {
 
     public:
         Matrix();
-        Matrix(int sizeX, int sizeY);
+        Matrix(int sizeX, int sizeY){
+            int zero =0;
+            columns = sizeX;
+            rows = sizeY;
+            hRows = new Node<T>() ;
+
+        };
 
         void set(int x, int y, T data);
         T operator()(int x, int y);
