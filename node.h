@@ -5,33 +5,33 @@ using namespace std;
 
 template <class T>
 class Node {
+public:
     int x, y;
     T data; 
     Node* next;
     Node* down;
 public:
-	Node(int cant, int pos){
+	Node(){
+		next=nullptr;
+		down=nullptr;
 
-		if (cant<0)
-		{
-			x=pos;
-			--cant;
-			++pos;
-			this.next-> new Node<T>(cant,pos);
-		}
+	};
 
-	}
-	Node(int cant, int pos, bool r){
+	Node(int pos){
+		x=pos;
+		next=nullptr;
+		down=nullptr;
+		//data=0;
+	};
 
-		if (cant<0)
-		{
-			y=pos;
-			--cant;
-			++pos;
-			this.down-> new Node<T>(cant,pos,r);
-		}
-
-	}
+	
+	Node(Node* next,Node* down, int x,int y,T data){
+		this->x=x;
+		this->y=y;
+		this->next=next;
+		this->down=down;
+		this->data=data;
+	};
 };
 
 #endif
