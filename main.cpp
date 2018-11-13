@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
 	
     a.set(0,0,5);
     a.set(0,1,4);
+    a.set(0,1,7);
     b=a;
     (a.transposed()).print();
     cout<<"---------"<<endl;

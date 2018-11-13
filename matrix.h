@@ -43,6 +43,11 @@ class Matrix {
 
         void set(int x, int y, T data){
 
+            if (x >= rows || y >= columns)
+            {
+                cout<<"Fuera del rango de la matriz";
+            }else{
+
             Node<T>* Rtemp = this->hRows;
 
             for (int i = 0; i < x; ++i)
@@ -74,6 +79,7 @@ class Matrix {
             Node<T>* tempSet = new Node<T>(Rtemp->next,Ctemp->down,x,y,data);
             Rtemp->next=tempSet;
             Ctemp->down=tempSet;
+        }
         };
 
         T operator()(int x, int y){
